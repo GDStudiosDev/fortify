@@ -104,4 +104,4 @@ MIT
 
 ## Credits
 
-Built by [Game Deity Studios LLC](https://gamedeitystudios.net). Informed by gap analysis of existing tools including [simeononsecurity/Windows-Optimize-Harden-Debloat](https://github.com/simeononsecurity/Windows-Optimize-Harden-Debloat), [AveYo/RemoveWindowsAI](https://github.com/AveYo/RemoveWindowsAI), and [Raphire/Win11Debloat](https://github.com/Raphire/Win11Debloat).
+Built by [Game Deity Studios LLC](https://gamedeitystudios.com). Informed by gap analysis of existing tools including [simeononsecurity/Windows-Optimize-Harden-Debloat](https://github.com/simeononsecurity/Windows-Optimize-Harden-Debloat), [AveYo/RemoveWindowsAI](https://github.com/AveYo/RemoveWindowsAI), and [Raphire/Win11Debloat](https://github.com/Raphire/Win11Debloat).
