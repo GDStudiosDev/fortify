@@ -109,9 +109,11 @@ try {
     Write-FortifyResult "SMB signing: $($_.Exception.Message)" -Status "WARN"
 }
 
-# RDP NLA
+# RDP: require NLA and force TLS security layer (SecurityLayer=0 with TLS 1.0 disabled breaks RDP)
 Set-FortifyRegistry -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" -Name "UserAuthentication" -Value 1
-Write-FortifyResult "RDP Network Level Authentication required"
+Set-FortifyRegistry -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" -Name "SecurityLayer" -Value 2
+Set-FortifyRegistry -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" -Name "MinEncryptionLevel" -Value 3
+Write-FortifyResult "RDP: NLA required, TLS security layer, high encryption"
 
 # Remote Assistance
 Set-FortifyRegistry -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Remote Assistance" -Name "fAllowToGetHelp" -Value 0
